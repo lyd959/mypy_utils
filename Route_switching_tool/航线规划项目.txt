@@ -1,0 +1,13 @@
+需要先建立一个任务文件夹及在其下创建image_path并将tif文件放入其中
+
+将大文件切成长条文件，便于后续处理
+cutAsLine.py
+
+批量将长条文件经纬度提取存储，便于后续定位
+line2lonlat.py
+
+cv2打点程序
+get_imgXY.py
+
+根据line信息搜寻经纬度
+tranlonlat.py
