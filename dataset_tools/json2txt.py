@@ -8,7 +8,7 @@ from tqdm import tqdm
 def convert_label_json(json_dir, save_dir, classes):
     json_paths = os.listdir(json_dir)
     classes = classes.split(',')
- 
+    
     for json_path in tqdm(json_paths):
         # for json_path in json_paths:
         path = os.path.join(json_dir, json_path)
@@ -43,9 +43,9 @@ if __name__ == "__main__":
     python json2txt_nomalize.py --json-dir my_datasets/color_rings/jsons --save-dir my_datasets/color_rings/txts --classes "cat,dogs"
     """
     parser = argparse.ArgumentParser(description='json convert to txt params')
-    parser.add_argument('--json-dir', type=str,default='D:/0.Data/pineapple/lme', help='json path dir')
-    parser.add_argument('--save-dir', type=str,default='D:/0.Data/pineapple/pineapple/pineapple_yolo/txt' ,help='txt save dir')
-    parser.add_argument('--classes', type=str, default='weed',help='classes')
+    parser.add_argument('--json-dir', type=str,default='D:/0.Data/pineapple/菠萝心', help='json path dir')
+    parser.add_argument('--save-dir', type=str,default='D:/0.Data/pineapple/菠萝心/txt/' ,help='txt save dir')
+    parser.add_argument('--classes', type=str, default='heart',help='classes')
     args = parser.parse_args()
     json_dir = args.json_dir
     save_dir = args.save_dir
