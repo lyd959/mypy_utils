@@ -1,3 +1,4 @@
+import os
 import cv2
 import numpy as np
 import math
@@ -56,6 +57,8 @@ def draw_circle(event, x, y, flags, param):
         cv2.imshow('image', img2)
 
 def savecsv(filedir):
+    if not os.path.exists(filedir+"/result"):
+        os.makedirs(filedir+"/result")
     np.savetxt(filedir+"/result/line.csv", lists, fmt='%d')
     print('------------csv save done------------')
 
@@ -63,7 +66,7 @@ def savecsv(filedir):
 if __name__ == '__main__':     
     parser = argparse.ArgumentParser(description='Trans latlot')
     parser.add_argument('--task_path',
-                    default='C:/lyd_software/0.pythonCode/lyd_utils/task',
+                    default=r'C:\lyd_software\0.pythonCode\lyd_utils\Route_switching_tool\lanj2',
                     help='root dir')
     args = parser.parse_args()
     filedir = args.task_path
