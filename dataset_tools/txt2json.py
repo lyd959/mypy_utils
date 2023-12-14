@@ -41,8 +41,11 @@ def batch_convert_txt_to_json(txt_folder, json_folder):
 
             txt_to_json(txt_path, json_path)
 
+
+
+
 # 指定你的 txt 文件夹和 json 存储文件夹
-txt_folder_path = 'D:/0.Data/pineapple/pineapple/test/label'
-json_folder_path = 'D:/0.Data/pineapple/pineapple/test/label/json'
+txt_folder_path = 'D:/0.Data/pineapple/pineapple/pineapple_weed_yolo/txt'
+json_folder_path = 'D:/0.Data/pineapple/pineapple/multi_line_weed_dataset/detection-weed'
 
 batch_convert_txt_to_json(txt_folder_path, json_folder_path)
